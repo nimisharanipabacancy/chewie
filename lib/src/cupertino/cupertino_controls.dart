@@ -776,7 +776,7 @@ class _CupertinoControlsState extends State<CupertinoControls>
   }
 
   void _bufferingTimerTimeout() {
-    _displayBufferingIndicator = true;
+    _displayBufferingIndicator = false;
     if (mounted) {
       setState(() {});
     }
@@ -798,7 +798,7 @@ class _CupertinoControlsState extends State<CupertinoControls>
         _displayBufferingIndicator = false;
       }
     } else {
-      _displayBufferingIndicator = controller.value.isBuffering;
+      _displayBufferingIndicator = false; //controller.value.isBuffering;
     }
 
     setState(() {
